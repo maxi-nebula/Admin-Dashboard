@@ -21,21 +21,35 @@
 }
 
 .list-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
 }
-ul,
-li {
+ul {
   list-style-type: none;
 }
 
-li {
+.icon-list {
+  grid-column: 1/2;
+}
+
+.icon-list li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.name-list {
+  display: grid;
+  font-size: larger;
+  font-weight: bolder;
 
+  grid-column: 2/3;
+}
+
+.name-list span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .text-list {
   padding: 20px;
 }
@@ -48,7 +62,7 @@ img {
 .header {
   grid-column: 2/3;
 
-  background-color: grey;
+  background-color: white;
 }
 .title-area {
   display: flex;
@@ -98,4 +112,9 @@ img {
   width: 250px;
   color: black;
   text-align: center;
+}
+
+.filler {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(270deg)
+    brightness(103%) contrast(100%);
 }
